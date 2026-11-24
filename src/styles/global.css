@@ -211,7 +211,6 @@ h2 { font-size: clamp(39px, 4.2vw, 61px); line-height: 1.08; margin: 0; }
   .hero-facts strong { font-size: 23px; }
   .hero-visual { min-height: 330px; height: 330px; margin-bottom: 38px; }
   .hero-caption { left: 20px; right: 20px; font-size: 12px; letter-spacing: .045em; }
-  .hero-caption span:last-child { display: none; }
   .section-pad { padding-left: 20px; padding-right: 20px; }
   .intro { padding-top: 72px; padding-bottom: 72px; }
   .intro-grid { grid-template-columns: 1fr; gap: 22px; }
