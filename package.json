@@ -1,0 +1,23 @@
+{
+  "name": "logoisk-villa",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@lucide/astro": "^1.78.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "^6.4.8",
+    "tailwindcss": "^4.3.5"
+  },
+  "overrides": {
+    "vite": "^7.3.2"
+  }
+}

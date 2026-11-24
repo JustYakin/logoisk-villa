@@ -1,0 +1,198 @@
+---
+import "../styles/global.css";
+import { ArrowDown, ArrowRight, ArrowUpRight, BedDouble, MapPin, Phone, UsersRound } from "@lucide/astro";
+const base = import.meta.env.BASE_URL;
+
+const houses = [
+  {
+    name: "White Villa",
+    description: "Светлый просторный дом для большой компании и долгих разговоров за общим столом.",
+    rooms: "10 комнат",
+    guests: "25 спальных мест",
+    image: `${base}images/white-01.webp`,
+    alt: "White Villa среди деревьев на территории усадьбы",
+    className: "house-card--white",
+  },
+  {
+    name: "Wooden Villa",
+    description: "Тёплый деревянный дом с просторной гостиной и местом, чтобы собраться всем вместе.",
+    rooms: "7 комнат",
+    guests: "20 спальных мест",
+    image: `${base}images/wooden-03.webp`,
+    alt: "Просторная гостиная Wooden Villa с деревянной отделкой",
+    className: "house-card--wooden",
+  },
+];
+
+const gallery = [
+  { src: `${base}images/wooden-02.webp`, alt: "Деревянный дом и ухоженная территория" },
+  { src: `${base}images/kufar-wooden-25.webp`, alt: "Просторная гостиная Wooden Villa с деревянной отделкой" },
+  { src: `${base}images/kufar-white-25.webp`, alt: "Спальня в одном из домов усадьбы" },
+  { src: `${base}images/kufar-white-13.webp`, alt: "Большой общий стол в деревянном доме" },
+];
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2eb" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <meta name="description" content="Два дома для отдыха компанией до 45 гостей в усадьбе Логойск Вилла. Медухово, 30 км от Минска. Баня и банкетный зал на территории." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Логойск Вилла — отдых большой компанией" />
+    <meta property="og:description" content="Два дома, баня и банкетный зал в Медухово. До 45 спальных мест, 30 км от Минска." />
+    <meta property="og:image" content={`${base}images/wooden-01.webp`} />
+    <title>Логойск Вилла — отдых большой компанией в Медухово</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Логойск Вилла — на главную">
+        <span class="brand-mark" aria-hidden="true">Л</span>
+        <span class="brand-name">Логойск<br />Вилла</span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#houses">Дома</a>
+        <a href="#territory">На территории</a>
+        <a href="#prices">Цены</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+375296776651"><Phone size={16} strokeWidth={1.7} /><span>Позвонить</span></a>
+      <a class="menu-booking" href="#prices" aria-label="Посмотреть цены и забронировать">Бронирование <ArrowUpRight size={17} /></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Медухово · 30 км от Минска</p>
+          <h1 id="hero-title">Место, где<br />все <em>собираются</em></h1>
+          <p class="hero-text">Два уютных дома, отдельная баня и банкетный зал — для отдыха большой компанией до 45 гостей.</p>
+          <div class="hero-actions">
+            <a class="button button--dark" href="#prices">Выбрать дом <ArrowRight size={17} /></a>
+            <a class="text-link" href="#houses">Посмотреть дома <ArrowDown size={15} /></a>
+          </div>
+          <div class="hero-facts">
+            <div><strong>45</strong><span>спальных мест</span></div>
+            <span class="fact-divider"></span>
+            <div><strong>2</strong><span>отдельных дома</span></div>
+            <span class="fact-divider"></span>
+            <div><strong>30 <small>км</small></strong><span>от Минска</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-image" src={`${base}images/wooden-01.webp`} alt="Wooden Villa на солнечной зелёной территории" fetchpriority="high" />
+          <div class="hero-image-note"><span class="note-line"></span><span>Логойск Вилла<br /><small>уют загородного дома</small></span></div>
+          <div class="hero-photo-index">УСАДЬБА · МЕДУХОВО</div>
+        </div>
+        <div class="hero-caption"><span>ПРИРОДА · ПРОСТРАНСТВО · ВРЕМЯ ВМЕСТЕ</span><span>54°10'40.0"N&nbsp; 27°47'24.2"E</span></div>
+      </section>
+
+      <section class="intro section-pad">
+        <p class="eyebrow">Загородный отдых без спешки</p>
+        <div class="intro-grid">
+          <h2>Собраться всем.<br /><em>И остаться с ночёвкой.</em></h2>
+          <p>Логойск Вилла — это два дома на одной территории, где удобно отдыхать своей компанией. Выберите один дом для близких или объедините оба, если собираетесь большим кругом.</p>
+        </div>
+      </section>
+
+      <section class="houses-section section-pad" id="houses">
+        <div class="section-heading">
+          <div><p class="eyebrow">Размещение</p><h2>Два дома.<br /><em>Одна территория.</em></h2></div>
+          <p class="section-aside">Каждый дом можно арендовать отдельно.<br />Вместе они примут до 45 гостей.</p>
+        </div>
+        <div class="house-grid">
+          {houses.map((house, index) => (
+            <article class={`house-card ${house.className}`}>
+              <div class="house-photo-wrap">
+                <img src={house.image} alt={house.alt} loading="lazy" />
+                <span class="house-number">0{index + 1}</span>
+              </div>
+              <div class="house-details">
+                <div class="house-title-row"><h3>{house.name}</h3><a href="#prices" class="round-link" aria-label={`Цены на ${house.name}`}><ArrowUpRight size={19} /></a></div>
+                <p>{house.description}</p>
+                <div class="house-meta"><span><BedDouble size={16} />{house.rooms}</span><span><UsersRound size={16} />{house.guests}</span></div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="territory-section section-pad" id="territory">
+        <div class="territory-copy">
+          <p class="eyebrow">Всё рядом, всё отдельно</p>
+          <h2>На территории<br /><em>есть ещё место</em></h2>
+          <p class="territory-lead">Чтобы отдыхать так, как хочется именно вашей компании.</p>
+          <a class="text-link text-link--light" href="#prices">Уточнить свободные даты <ArrowRight size={16} /></a>
+        </div>
+        <div class="amenity-list">
+          <article class="amenity-card">
+            <div class="amenity-photo-frame"><img src={`${base}images/bathhouse-01.webp`} alt="Парная бани с деревянными полками и печью" loading="lazy" /></div>
+            <div class="amenity-card-copy"><p class="eyebrow">Отдельное здание</p><h3>Баня</h3><p>Парная для спокойного отдыха после дня за городом.</p></div>
+            <strong class="amenity-price">150 <small>BYN</small><span> / 3 часа</span></strong>
+          </article>
+          <article class="amenity-card">
+            <div class="amenity-photo-frame"><img src={`${base}images/banquet-hall-02.webp`} alt="Отдельное здание банкетного зала на территории усадьбы" loading="lazy" /></div>
+            <div class="amenity-card-copy"><p class="eyebrow">Отдельное здание</p><h3>Банкетный зал</h3><p>Отдельная площадка для семейного праздника или встречи большой компанией.</p></div>
+            <strong class="amenity-price">до 60<span> гостей</span></strong>
+          </article>
+          <div class="amenity-footnote">Баня и банкетный зал находятся в отдельных зданиях на территории усадьбы.</div>
+        </div>
+      </section>
+
+      <section class="prices-section section-pad" id="prices">
+        <div class="section-heading prices-heading">
+          <div><p class="eyebrow">Понятные условия</p><h2>Выберите свой<br /><em>вариант отдыха</em></h2></div>
+          <div class="stay-time"><span>Заезд</span><strong>14:00</strong><i></i><span>Выезд</span><strong>12:00</strong></div>
+        </div>
+        <div class="price-cards">
+          <article class="price-card">
+            <p class="eyebrow">До 20 гостей</p><h3>Один дом</h3><p class="price-duration">2 ночи · будни или выходные</p>
+            <div class="price-row"><span>Будни</span><strong>1 200 <small>BYN</small></strong></div>
+            <div class="price-row"><span>Выходные</span><strong>1 450 <small>BYN</small></strong></div>
+            <div class="price-row price-row--single"><span>1 день в выходной</span><strong>900 <small>BYN</small></strong></div>
+            <a class="button button--outline" href="tel:+375296776651">Уточнить даты <ArrowUpRight size={16} /></a>
+          </article>
+          <article class="price-card price-card--featured">
+            <span class="price-badge">Для большой компании</span>
+            <p class="eyebrow">До 45 гостей</p><h3>Два дома</h3><p class="price-duration">2 ночи · оба дома целиком</p>
+            <div class="price-row"><span>Будни</span><strong>2 400 <small>BYN</small></strong></div>
+            <div class="price-row"><span>Выходные</span><strong>2 900 <small>BYN</small></strong></div>
+            <div class="price-row price-row--single"><span>Баня</span><strong>150 <small>BYN / 3 ч</small></strong></div>
+            <a class="button button--light" href="tel:+375296776651">Уточнить даты <ArrowUpRight size={16} /></a>
+          </article>
+        </div>
+        <p class="price-note">Стоимость банкетного зала и других дополнительных услуг уточняйте при бронировании.</p>
+      </section>
+
+      <section class="gallery-section section-pad">
+        <div class="gallery-heading"><div><p class="eyebrow">Посмотрите вокруг</p><h2>Усадьба в деталях</h2></div><a class="text-link" href="https://www.instagram.com/logoisk_villa/" target="_blank" rel="noreferrer">Больше фото в Instagram <ArrowUpRight size={16} /></a></div>
+        <div class="gallery-grid">
+          {gallery.map((photo, index) => <figure class={`gallery-photo gallery-photo--${index + 1}`}><img src={photo.src} alt={photo.alt} loading="lazy" /></figure>)}
+        </div>
+        <p class="photo-credit">Фото: <a href="https://www.holiday.by/by/dom/estates/logoyskvilla" target="_blank" rel="noreferrer">Holiday.by</a>, объявления на <a href="https://re.kufar.by/vi/minskaya-oblast/snyat/dom/1089484111" target="_blank" rel="noreferrer">Kufar</a> и галереи <a href="https://usadby.by/usadba-logojsk-villa" target="_blank" rel="noreferrer">Usadby.by</a>. Больше кадров — в <a href="https://www.instagram.com/logoisk_villa/" target="_blank" rel="noreferrer">Instagram</a>.</p>
+      </section>
+
+      <section class="contact-section section-pad" id="contacts">
+        <div class="contact-visual"><img src={`${base}images/white-02.webp`} alt="Территория усадьбы окружена деревьями" loading="lazy" /><div class="contact-stamp">LOGOISK<br />VILLA</div></div>
+        <div class="contact-copy">
+          <p class="eyebrow">Будем рады вашей компании</p>
+          <h2>Пора выбрать<br /><em>даты</em></h2>
+          <p class="contact-address"><MapPin size={18} /> Минская область, Логойский район,<br />д. Медухово, ул. Центральная, 34</p>
+          <div class="contact-actions"><a class="button button--dark" href="tel:+375296776651"><Phone size={16} /> Елена · +375 29 677‑66‑51</a><a class="contact-secondary" href="tel:+375296776601">Владимир · +375 29 677‑66‑01 <span>запасной номер</span></a></div>
+          <a class="map-link" href="https://maps.google.com/?q=54.177753,27.790066" target="_blank" rel="noreferrer">Открыть маршрут <ArrowUpRight size={16} /></a>
+        </div>
+      </section>
+
+      <section class="closing-line"><span>Логойск Вилла</span><span>Место для времени вместе</span><a href="#top">Наверх ↑</a></section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="#top"><span class="brand-mark" aria-hidden="true">Л</span><span class="brand-name">Логойск<br />Вилла</span></a>
+      <p>Два дома для отдыха<br />в Медухово, Беларусь</p>
+      <a href="https://www.instagram.com/logoisk_villa/" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={15} /></a>
+      <small>© 2026 Логойск Вилла</small>
+    </footer>
+
+    <a class="mobile-call" href="tel:+375296776651"><Phone size={18} /> Позвонить Елене</a>
+  </body>
+</html>
