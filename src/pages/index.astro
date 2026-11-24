@@ -9,7 +9,7 @@ const houses = [
     description: "Светлый просторный дом для большой компании и долгих разговоров за общим столом.",
     rooms: "10 комнат",
     guests: "25 спальных мест",
-    image: `${base}images/white-01.webp`,
+    image: `${base}/images/white-01.webp`,
     alt: "White Villa среди деревьев на территории усадьбы",
     className: "house-card--white",
   },
@@ -18,17 +18,17 @@ const houses = [
     description: "Тёплый деревянный дом с просторной гостиной и местом, чтобы собраться всем вместе.",
     rooms: "7 комнат",
     guests: "20 спальных мест",
-    image: `${base}images/wooden-03.webp`,
+    image: `${base}/images/wooden-03.webp`,
     alt: "Просторная гостиная Wooden Villa с деревянной отделкой",
     className: "house-card--wooden",
   },
 ];
 
 const gallery = [
-  { src: `${base}images/wooden-02.webp`, alt: "Деревянный дом и ухоженная территория" },
-  { src: `${base}images/kufar-wooden-25.webp`, alt: "Просторная гостиная Wooden Villa с деревянной отделкой" },
-  { src: `${base}images/kufar-white-25.webp`, alt: "Спальня в одном из домов усадьбы" },
-  { src: `${base}images/kufar-white-13.webp`, alt: "Большой общий стол в деревянном доме" },
+  { src: `${base}/images/wooden-02.webp`, alt: "Деревянный дом и ухоженная территория" },
+  { src: `${base}/images/kufar-wooden-25.webp`, alt: "Просторная гостиная Wooden Villa с деревянной отделкой" },
+  { src: `${base}/images/kufar-white-25.webp`, alt: "Спальня в одном из домов усадьбы" },
+  { src: `${base}/images/kufar-white-13.webp`, alt: "Большой общий стол в деревянном доме" },
 ];
 ---
 
@@ -37,12 +37,12 @@ const gallery = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5f2eb" />
-    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
     <meta name="description" content="Два дома для отдыха компанией до 45 гостей в усадьбе Логойск Вилла. Медухово, 30 км от Минска. Баня и банкетный зал на территории." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Логойск Вилла — отдых большой компанией" />
     <meta property="og:description" content="Два дома, баня и банкетный зал в Медухово. До 45 спальных мест, 30 км от Минска." />
-    <meta property="og:image" content={`${base}images/wooden-01.webp`} />
+    <meta property="og:image" content={`${base}/images/wooden-01.webp`} />
     <title>Логойск Вилла — отдых большой компанией в Медухово</title>
   </head>
   <body>
@@ -80,7 +80,7 @@ const gallery = [
           </div>
         </div>
         <div class="hero-visual">
-          <img class="hero-image" src={`${base}images/wooden-01.webp`} alt="Wooden Villa на солнечной зелёной территории" fetchpriority="high" />
+          <img class="hero-image" src={`${base}/images/wooden-01.webp`} alt="Wooden Villa на солнечной зелёной территории" fetchpriority="high" />
           <div class="hero-image-note"><span class="note-line"></span><span>Логойск Вилла<br /><small>уют загородного дома</small></span></div>
           <div class="hero-photo-index">УСАДЬБА · МЕДУХОВО</div>
         </div>
@@ -126,12 +126,12 @@ const gallery = [
         </div>
         <div class="amenity-list">
           <article class="amenity-card">
-            <div class="amenity-photo-frame"><img src={`${base}images/bathhouse-01.webp`} alt="Парная бани с деревянными полками и печью" loading="lazy" /></div>
+            <div class="amenity-photo-frame"><img src={`${base}/images/bathhouse-01.webp`} alt="Парная бани с деревянными полками и печью" loading="lazy" /></div>
             <div class="amenity-card-copy"><p class="eyebrow">Отдельное здание</p><h3>Баня</h3><p>Парная для спокойного отдыха после дня за городом.</p></div>
             <strong class="amenity-price">150 <small>BYN</small><span> / 3 часа</span></strong>
           </article>
           <article class="amenity-card">
-            <div class="amenity-photo-frame"><img src={`${base}images/banquet-hall-02.webp`} alt="Отдельное здание банкетного зала на территории усадьбы" loading="lazy" /></div>
+            <div class="amenity-photo-frame"><img src={`${base}/images/banquet-hall-02.webp`} alt="Отдельное здание банкетного зала на территории усадьбы" loading="lazy" /></div>
             <div class="amenity-card-copy"><p class="eyebrow">Отдельное здание</p><h3>Банкетный зал</h3><p>Отдельная площадка для семейного праздника или встречи большой компанией.</p></div>
             <strong class="amenity-price">до 60<span> гостей</span></strong>
           </article>
@@ -173,7 +173,7 @@ const gallery = [
       </section>
 
       <section class="contact-section section-pad" id="contacts">
-        <div class="contact-visual"><img src={`${base}images/white-02.webp`} alt="Территория усадьбы окружена деревьями" loading="lazy" /><div class="contact-stamp">LOGOISK<br />VILLA</div></div>
+        <div class="contact-visual"><img src={`${base}/images/white-02.webp`} alt="Территория усадьбы окружена деревьями" loading="lazy" /><div class="contact-stamp">LOGOISK<br />VILLA</div></div>
         <div class="contact-copy">
           <p class="eyebrow">Будем рады вашей компании</p>
           <h2>Пора выбрать<br /><em>даты</em></h2>
